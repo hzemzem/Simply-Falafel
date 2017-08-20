@@ -19,6 +19,6 @@ This software was designed and developed by the following team of students at th
 |Name|Role|GitHub|LinkedIn|Portfolio|
 |----|----|------|--------|---------|
 |Hajar Zemzem|Core developer, Backend|[Hajar's GitHub](https://github.com/hzemzem)|[Hajar's LinkedIn](https://www.linkedin.com/in/hajarzemzem/)
-|Michael Mann|Core developer, Backend|[Michael's GitHub](https://github.com/)|[Michael's LinkedIn](https://www.linkedin.com/in/)
-|David Rosenberg|Core developer, Frontend|[David's GitHub](https://github.com/)|[David's LinkedIn](https://www.linkedin.com/in/)|[David's Development Portfolio](http://rosenberg-illustration.com/develop/), [David's Design Portfolio](http://rosenberg-illustration.com/design/web.html)
+|Michael Mann|Core developer, Backend|[Michael's GitHub](https://github.com/mmann30)|[Michael's LinkedIn](https://www.linkedin.com/in/)
+|David Rosenberg|Core developer, Frontend|[David's GitHub](https://github.com/davesrose)|[David's LinkedIn](https://www.linkedin.com/in/)|[David's Development Portfolio](http://rosenberg-illustration.com/develop/), [David's Design Portfolio](http://rosenberg-illustration.com/design/web.html)
 |Fletcher Whiting|Core developer, Frontend|[Fletcher's GitHub](https://github.com/)|[Fletcher's LinkedIn](https://www.linkedin.com/in/)
