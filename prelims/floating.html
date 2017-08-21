@@ -1,3 +1,6 @@
+<!--  ==========This is a test page to make a simple function for having an element move with the page, untill it reaches the top of the page ========= -->
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +18,12 @@
 			width: 100%;
 			position: fixed;
 		}
+		.floating2 {
+			height: 100px;
+			background-color: #4dd;
+			width: 100%;
+			position: fixed;
+		}
 		.wrapper {
 			height: 1500px;
 		}
@@ -23,6 +32,7 @@
 <body>
 <div class="wrapper">
 	<div class="floating" id="float"></div>
+	<div class="floating2" id="float"></div>
 </div>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -42,6 +52,7 @@ $(document).ready(function() {
 	  });
 	}
 	sticky(".floating", 80);
+	sticky(".floating2", 300);
 });
 </script>
 </body>
