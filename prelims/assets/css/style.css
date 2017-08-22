@@ -4,6 +4,7 @@ html, body {
 }
 body {
 	height: 1500px;
+	background: #ddd;
 }
 .section1 {
 	width: 100%;
@@ -29,7 +30,7 @@ nav {
 	z-index: 100;
 }
 .container {
-	max-width: 1200px;
+	width: 1200px;
 	margin: 0 auto;
 }
 .logo {
@@ -113,8 +114,7 @@ nav {
 }
 .section2 {
 	padding-top: 80px;
-	height: 960px;
-	background: #ddd;
+	/*height: 960px;*/
 	z-index: 10;
 	top:40px;
 }
@@ -140,7 +140,7 @@ nav {
 	margin-bottom: -10px;
 }
 .flexContainer {
-	max-width: 1200px;
+	width: 1100px;
 	display: flex;
 	margin: 0 auto;
 }
@@ -194,13 +194,13 @@ nav {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c6b4d', endColorstr='#457c74',GradientType=0 ); /* IE6-9 */
 }
 .downloadMenu {
-	margin-top: -52px;
-	float: right;
+	margin-top: 20px;
+	float: left;
 	font-family: 'Slabo', sans-serif;
 	font-size: 18px;
-	padding: 15px 10px 16px 14px;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
+	padding: 18px 14px 20px 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
 	font-weight: 600;	
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2b3f27+0,173f15+31,3e5415+77,2e5656+100 */
 	background: rgb(43,63,39); /* Old browsers */
@@ -216,4 +216,107 @@ nav {
 	background: -webkit-linear-gradient(top, rgba(76,107,77,1) 0%,rgba(49,109,58,1) 31%,rgba(83,117,60,1) 77%,rgba(69,124,116,1) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom, rgba(76,107,77,1) 0%,rgba(49,109,58,1) 31%,rgba(83,117,60,1) 77%,rgba(69,124,116,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c6b4d', endColorstr='#457c74',GradientType=0 ); /* IE6-9 */
+}
+.section3 {
+	background-color: #fff;
+	width: 100%;
+	padding-bottom: 30px;
+
+}
+.section3 h1 {
+	font-family: 'Slabo', sans-serif;
+	font-size: 32px;
+	font-weight: 300;
+	text-align: center;
+	padding-top: 110px;
+	padding-bottom: 10px;
+}
+.slideshow {
+    position: relative;
+    height: 540px;
+    width: 800px;
+    overflow: hidden;
+    float: left;
+}
+.slideshow img {
+    position: absolute;
+    top: 0;
+    left: -800px;
+    width: 800px;
+    height: 540px;
+    -webkit-transition: all 0.6s ease;                  
+    -moz-transition: all 0.6s ease;                 
+    -o-transition: all 0.6s ease;   
+    -ms-transition: all 0.6s ease;          
+    transition: all 0.6s ease;
+}
+.slideshow img:first-child {
+    left: 0px;
+}
+.imgRight {
+	width: 400px;
+	float: left;
+}
+.lightbox a img {
+	margin: 15px 5px;
+	width: 226px;
+}
+.section4 h1 {
+	font-family: 'Slabo', sans-serif;
+	font-size: 32px;
+	font-weight: 300;
+	text-align: center;
+	padding-top: 80px;
+	padding-bottom: 30px;
+}
+.section4 iframe {
+	border: solid 1px #444;
+	box-shadow: 6px 6px 10px #400;
+	float: left;
+}
+.section4 .contact {
+	float: right;
+	margin-right: 90px;
+}
+.contact a {
+	color: #000;
+	text-decoration: none;
+}
+.fa {
+	margin: 0px 15px;
+	float: right;
+	margin-bottom: 30px;
+}
+.tele {
+	font-family: 'Slabo', sans-serif;
+	font-size: 25px;
+}
+.section4 {
+	padding-bottom: 50px;
+}
+.section4 h2 {
+	font-family: 'Encode Sans', sans-serif;
+	font-size: 24px;
+	text-align: center;
+}
+.section4 ul {
+	list-style-type: none;
+	padding-left: 0;
+	margin-left: 0;
+	font-family: 'Slabo', sans-serif;
+	font-size: 24px;
+}
+.footer {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,efefef+100 */
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(239,239,239,1) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(239,239,239,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(239,239,239,1) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
+	box-shadow: -5px -5px 8px #000;
+	height: 40px;
+	padding-top: 25px;
+	width: 100%;
+	font-family: 'Slabo', sans-serif;
+	font-size: 18px;
 }
