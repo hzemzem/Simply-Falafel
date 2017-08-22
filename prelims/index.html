@@ -5,8 +5,11 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="assets/js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/jquery.fancybox.min.css">
+	<script type="text/javascript" src="assets/js/jquery.fancybox.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Slabo|Lora|Encode+Sans" rel="stylesheet">
 	<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon"/>
+	<script src="https://use.fontawesome.com/ae85989865.js"></script>
 </head>
 <body>
 	<div class="section1" id="about">
@@ -19,7 +22,7 @@
 					<div class="border"></div>
 					<a href="#menu"><li>Menu</li></a>
 					<div class="border"></div>
-					<a href="#gallery"><li>Gallery</li></a>
+					<a href="#galleryMain"><li>Gallery</li></a>
 					<div class="border"></div>
 					<a href="#contact"><li style="padding-right: 10px;">Contact</li></a>
 					<div class="clear"></div>
@@ -39,8 +42,8 @@
 	</div>
 	<div class="section2" id="menu">
 		<h1>MENU</h1>
-		<a href="assets/images/menu.pdf" target="_blank"><div class="downloadMenu">Print Menu</div></a>
 		<a href="order.html" target="_blank"><div class="order">Order Online</div></a>
+		<a href="assets/images/menu.pdf" target="_blank"><div class="downloadMenu">Print Menu</div></a>
 		<div class="flexContainer">
 			<article class="foodSection flexFood">
 				<h2>Meals</h2>
@@ -203,5 +206,60 @@
 			</article>
 		</div>
 	</div>
+	<div class="section3" id="galleryMain">
+		<div class="container">
+			<h1>GALLERY</h1>
+			<div class="slideshow">
+				<!-- <img src="assets/images/gallery/01.jpg"> -->
+			</div>
+			<img class="imgRight" src="assets/images/02.jpg">
+			<div class="clear"></div>
+			<div class="lightbox">
+				<a data-fancybox="gallery" data-caption="Text goes here: if image of storefront" href="assets/images/lightbox/01.jpg">
+				    <img src="assets/images/lightbox/01thumb.jpg">
+				</a>			
+				<a data-fancybox="gallery" href="assets/images/lightbox/02.jpg">
+				    <img src="assets/images/lightbox/02thumb.jpg">
+				</a>
+				<a data-fancybox="gallery" href="assets/images/lightbox/03.jpg">
+				    <img src="assets/images/lightbox/03thumb.jpg">
+				</a>
+				<a data-fancybox="gallery" href="assets/images/lightbox/04.jpg">
+				    <img src="assets/images/lightbox/04thumb.jpg">
+				</a>
+				<a data-fancybox="gallery" href="assets/images/lightbox/05.jpg">
+				    <img src="assets/images/lightbox/05thumb.jpg">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="section4" id="contact">
+		<h1>CONTACT</h1>
+		<div class="container">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13240.826664696788!2d-84.3768535!3d33.9358123!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5e117179a1807cb4!2sSimply+Falafel!5e0!3m2!1sen!2sus!4v1503430013905" width="550" height="600" frameborder="0" allowfullscreen></iframe>
+			<article class="contact">
+				<a href="https://www.facebook.com/simplyfalafel/?ref=py_c" target="_blank"><i class="fa fa-facebook-official fa-4x" aria-hidden="true"></i></a>
+				<a href="https://www.yelp.com/biz/simply-falafel-sandy-springs" target="_blank" alt="yelp"><i class="fa fa-yelp fa-4x" aria-hidden="true"></i></a>
+				<div class="clear"></div>
+				<a href="tel:678-732-3773" class="tele">P: (678) 732-3773</a>
+				<h2>HOURS</h2>
+				<ul class="hours">
+					<li>Monday&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;10AM–10PM</li>
+					<li>Tuesday&emsp;&emsp;&emsp;&nbsp;&nbsp;10AM–10PM</li>
+					<li>Wednesday&emsp;&nbsp;&nbsp;&nbsp;&nbsp;10AM–10PM</li>
+					<li>Thursday&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10AM–10PM </li>
+					<li>Friday&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10AM–11PM</li>
+					<li>Saturday&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10AM–11PM</li>
+					<li>Sunday&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;10AM–10PM</li>
+				</ul>
+			</article>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			&copy;2017 | Simply Falafel | 6627 Roswell Rd Suite A, Sandy Springs, GA
+		</div>
+	</footer>
 </body>
 </html>
