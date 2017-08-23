@@ -1,6 +1,6 @@
 var path = require("path");
 
-var db = require("./models"); //define db variable as sequelize models
+var db = require("./../models"); //define db variable as sequelize models
 
 module.exports = function(app) {
 
