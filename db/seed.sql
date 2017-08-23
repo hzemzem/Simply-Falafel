@@ -32,7 +32,7 @@ VALUES
     ("Salad", "Shawarma Salad", "Salad", 7.99, now(), now()),
     ("Salad", "Tabbouleh Salad", "Salad", 6.95, now(), now()),
     ("Salad", "Fatoush Salad", "Salad", 6.95, now(), now()),
-    ("Soup", "Lentil Soup", "Soup", 3.95, now(), now()),
+    ("Side", "Lentil Soup", "Side", 3.95, now(), now()),
     ("Side", "Hummus", "Side", 4.95, now(), now()),
     ("Side", "Hummus +Shawarma", "Side", 7.45, now(), now()),
     ("Side", "Boba Ghanouj", "Side", 5.25, now(), now()),
