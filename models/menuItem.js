@@ -17,5 +17,10 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         }
     });
+    MenuItem.associate = function(models) {
+        MenuItem.hasMany(models.ShoppingCart, {
+            onDelete: "cascade"
+        });
+    };
     return MenuItem;
 };

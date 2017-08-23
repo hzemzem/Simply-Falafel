@@ -15,5 +15,19 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         }
     });
+
+    User.associate = function(models) {
+        User.hasMany(models.orderHistory, {
+            onDelete: "cascade"
+        });
+        
+    };
+    
+    User.associate = function(models) {
+        User.hasMany(models.billingAddresses, {
+            onDelete: "cascade"
+        });
+    };
+
     return User;
 };

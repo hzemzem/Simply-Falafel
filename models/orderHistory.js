@@ -9,5 +9,13 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         }
     });
+
+    OrderHistory.associate = function (models) {
+        OrderHistory.belongsTo(models.User, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
     return OrderHistory;
 };
