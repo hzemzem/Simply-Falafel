@@ -5,10 +5,10 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         }, 
         Quantity: {
-            type: DataTypes.INT,
+            type: DataTypes.INTEGER,
             allowNull: false,
             defaultValue: 1
-        }
+        },
         Price: {
             type: DataTypes.DECIMAL(10, 2),
             allowNull: false
