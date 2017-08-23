@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
         }, 
         AptNum: {
             type: DataTypes.INTEGER,
-        }
+        },
         City: {
             type: DataTypes.STRING,
             allowNull: false,
