@@ -1,7 +1,6 @@
 var express = require("express"); //require express npm package
 var bodyParser = require("body-parser"); //require body-parser npm package
 var methodOverride = require('method-override'); //require methodOverride npm package
-require('dotenv').config() //npm package for storing passwords in .env
 
 // Sets up the Express App
 // =============================================================
