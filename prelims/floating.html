@@ -1,0 +1,59 @@
+<!--  ==========This is a test page to make a simple function for having an element move with the page, untill it reaches the top of the page ========= -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Floating Div Test</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<style type="text/css">
+		body {
+			background-color: #444;
+			margin: 0px;
+			padding: 0px;
+		}
+		.floating {
+			height: 100px;
+			background-color: #ddd;
+			width: 100%;
+			position: fixed;
+		}
+		.floating2 {
+			height: 100px;
+			background-color: #4dd;
+			width: 100%;
+			position: fixed;
+		}
+		.wrapper {
+			height: 1500px;
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="floating" id="float"></div>
+	<div class="floating2" id="float"></div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	function sticky(element, offset) {
+		var Element = $(element);
+	  	Element.css({"top": offset});
+	  $(window).scroll(function () {
+	  	var topSpace = $(window).scrollTop();
+	    if (topSpace > offset) {
+	    	Element.css({"margin-top": -offset});
+	    }
+	    if (topSpace < offset) {
+	    	var squeeze = topSpace * -1;
+	    	console.log(squeeze);
+	    	Element.css({"margin-top": squeeze});
+	    }
+	  });
+	}
+	sticky(".floating", 80);
+	sticky(".floating2", 300);
+});
+</script>
+</body>
+</html>
