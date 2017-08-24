@@ -1,6 +1,12 @@
 <div class="container">
 		<h1>Meal</h1>
-		{{#each response}}			
-			<div class="menuItem">{{this.menuItem}}.....{{this.style}}</div>
+		{{#each response}}
+			{{#each response as |'Meal' response.category|}}
+				<div class="menuItem">{{this.menuItem}}.....{{this.style}}</div>
+			{{/each}}
 		{{/each}}
 </div>
+<script>
+console.log('javascript works');
+console.log({{response}});
+</script>

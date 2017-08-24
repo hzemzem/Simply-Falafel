@@ -1,8 +1,5 @@
 node_modules
 .DS_Store
-<<<<<<< HEAD
 .env
 password.js
-=======
-passwords.js
->>>>>>> 4e70f623ea1fc22d82b54d3f00b4fb0552b89c0a
+
