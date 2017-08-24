@@ -1,0 +1,5 @@
+var path = require('path');
+var password = require('./passwords.js')
+module.exports = {
+	'config' : path.resolve('path/to/folder', 'config/config.json'),
+}
