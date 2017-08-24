@@ -14,5 +14,12 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         }
     });
-    return ShoppingCart;
+    ShoppingCart.associate = function (models) {
+        ShoppingCart.belongsTo(models.MenuItem, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+    return ShoppingCart; 
 }; 
