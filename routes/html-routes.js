@@ -10,6 +10,14 @@ module.exports = function(app) {
 
 	app.get('/menu', function(req, res) {
 		db.MenuItem.findAll({}).then(function(response){
+			// var meals = [];
+			// for (var i=0; i < response.length; i++) {
+			// 	if (response[i].category === "Meal") {
+			// 		meals.push(response);
+			// 		// meals = JSON(response);
+			// 	}
+			// }
+			// console.log(meals);
 			return res.render('menu', {response});
 		})
 	});

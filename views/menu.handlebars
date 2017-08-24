@@ -1,9 +1,7 @@
 <div class="container">
 		<h1>Meal</h1>
-		{{#each response}}
-				{{#if this.category}}		
-					<div class="menuItem">{{this.menuItem}}.....{{this.style}}</div>
-				{{/if}}
+		{{#each response}}		
+				<div class="menuItem">{{this.menuItem}}.....{{this.style}}</div>
 		{{/each}}
 </div>
 <script>
