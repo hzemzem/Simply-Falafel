@@ -17,7 +17,7 @@ module.exports = function(app) {
     console.log(req.body);
     db.ShoppingCart.create({
       Items: req.body.menuItem,
-      Price: req.body.pody
+      Price: req.body.price
     })
     .then(function(dbMenuItem) {
       res.json(dbMenuItem);
