@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
         User.hasMany(models.orderHistory, {
             onDelete: "cascade"
         });
-        
+          
     };
     
     User.associate = function(models) {

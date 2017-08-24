@@ -17,5 +17,5 @@ module.exports = function(sequelize, DataTypes) {
             }
         });
     };
-    return OrderHistory;
+    return OrderHistory; 
 };

@@ -21,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         }
     });
-    
+     
     billingAddresses.associate = function (models) {
         billingAddresses.belongsTo(models.User, {
             foreignKey: {

@@ -37,4 +37,4 @@ db.sequelize.sync({ force: true}).then(function() { //sync our models and then
   app.listen(PORT, function() { //add event listener for port number
     console.log("App listening on PORT " + PORT);
   });
-});
+}); 
