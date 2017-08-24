@@ -1,6 +1,12 @@
 <div class="container">
 		<h1>Meal</h1>
-		{{#each response}}			
-			<div class="menuItem">{{this.menuItem}}.....{{this.style}}</div>
+		{{#each response}}
+				{{#if this.category}}		
+					<div class="menuItem">{{this.menuItem}}.....{{this.style}}</div>
+				{{/if}}
 		{{/each}}
 </div>
+<script>
+console.log('javascript works');
+console.log(response);
+</script>
