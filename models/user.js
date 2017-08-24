@@ -1,4 +1,4 @@
-//var bcrypt = require("bcrypt"); can be used to hash users passwords, implentation coming soon
+bcrypt = require("bcryptjs");
 
 module.exports = function(sequelize, DataTypes) {
     var User = sequelize.define("User", {
@@ -13,6 +13,12 @@ module.exports = function(sequelize, DataTypes) {
         email: {
             type: DataTypes.STRING,
             allowNull: false
+        },   
+    }, {
+        hooks: {
+            afterValidation: function(user) {
+                user.password = bcrypt.hashSync(user.password, 8);
+            }
         }
     });
 
