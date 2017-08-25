@@ -1,7 +1,7 @@
 <div class="container">
 		<h1>Meal</h1>
 		{{#each response}}
-			{{#each response as |'Meal' response.category|}}
+			{{#each response}}
 				<div class="menuItem">{{this.menuItem}}.....{{this.style}}</div>
 			{{/each}}
 		{{/each}}
