@@ -22,7 +22,7 @@ app.use(methodOverride('_method')); //include methodOverride for using more expr
 // Set Handlebars.
 var exphbs = require("express-handlebars"); //require express-handlebars npm package
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" })); //initialize handlebars with main as HTML body
+app.engine("handlebars", exphbs({ defaultLayout: "main", helpers: require("./config/handlebars.js") })); //initialize handlebars with main as HTML body
 app.set("view engine", "handlebars"); //set handlebars as default view
 
 // Routes
