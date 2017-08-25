@@ -28,7 +28,7 @@ VALUES
     ("Vegan", "Okra Chop", "Platter", 9.99, now(), now()),
     ("Kids", "Chicken Nuggets", "Platter", 5.99, now(), now()),
     ("Kids", "Chicken Strips", "Platter", 5.99, now(), now()),
-    ("Salad", "'Greek Salad'", "Salad", 6.95, now(), now()),
+    ("Salad", "Greek Salad", "Salad", 6.95, now(), now()),
     ("Salad", "Shawarma Salad", "Salad", 7.99, now(), now()),
     ("Salad", "Tabbouleh Salad", "Salad", 6.95, now(), now()),
     ("Salad", "Fatoush Salad", "Salad", 6.95, now(), now()),

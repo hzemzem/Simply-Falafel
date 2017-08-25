@@ -1,12 +1,35 @@
 <div class="container">
-		<h1>Meal</h1>
-		{{#each response}}
-			{{#each response}}
-				<div class="menuItem">{{this.menuItem}}.....{{this.style}}</div>
-			{{/each}}
-		{{/each}}
+	<div class="flexContainer">
+		<div class="flexFood">
+			<h1>Meal</h1>
+			<div class="meals">
+				{{#meal response}}
+				{{/meal}}
+			</div>
+		</div>
+		<div class="flexFood">
+			<h1>Vegan</h1>
+			<div class="meals">
+				{{#vegan response}}
+				{{/vegan}}
+			</div>
+			<h1>Kids</h1>
+			<div class="meals">
+				{{#kids response}}
+				{{/kids}}
+			</div>
+			<h1>Salad</h1>
+			<div class="meals">
+				{{#salad response}}
+				{{/salad}}
+			</div>
+		</div>
+		<div class="flexFood">
+			<h1>Drinks</h1>
+			<div class="meals">
+				{{#drink response}}
+				{{/drink}}
+			</div>
+		</div>
+	</div>
 </div>
-<script>
-console.log('javascript works');
-console.log({{response}});
-</script>
