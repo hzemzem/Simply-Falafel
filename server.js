@@ -31,6 +31,7 @@ require("./routes/html-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
+//{force:true}
 db.sequelize.sync().then(function() { //sync our models and then
   app.listen(PORT, function() { //add event listener for port number
     console.log("App listening on PORT " + PORT);

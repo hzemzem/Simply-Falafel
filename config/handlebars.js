@@ -1,9 +1,15 @@
 Handlebars = require('handlebars');
 
-function render(meals, array) {
-	console.log("meals: "+meals)
+function renderMeals(meals, array) {
 	for (var i =0; i < meals.length; i++) {
-		var line = "\t\t\t\t<div class='mealItem'>"+meals[i].menuItem+"<span class='style'>"+meals[i].style+"</span> "+meals[i].price+"</div>\n\t\t\t\t<div class='shopPop'><input type='checkbox' value='"+meals[i].id+"'></div>\n";
+		var line = "\t\t\t\t<div class='mealItem'>"+meals[i].menuItem+"<span class='style'>"+meals[i].style+"</span><button class='menuPrice' data-ID='"+meals[i].id+"'>"+meals[i].price+"</button></div>\n";
+		array.push(line)
+	}	
+}
+
+function renderItems(meals, array) {
+	for (var i =0; i < meals.length; i++) {
+		var line = "\t\t\t\t<div class='mealItem'>"+meals[i].menuItem+"<button class='menuPrice' data-ID='"+meals[i].id+"'>"+meals[i].price+"</button></div>\n";
 		array.push(line)
 	}	
 }
@@ -14,7 +20,7 @@ Handlebars.registerHelper('meal', function(response) {
 		return m.category === 'Meal';
 
 	});
-	render(meals, array);
+	renderMeals(meals, array);
 	return array.join("");
 });
 Handlebars.registerHelper('kids', function(response) {
@@ -23,7 +29,7 @@ Handlebars.registerHelper('kids', function(response) {
 		return m.category === 'Kids';
 
 	});
-	render(meals, array);
+	renderItems(meals, array);
 	return array.join("");
 });
 Handlebars.registerHelper('vegan', function(response) {
@@ -32,7 +38,7 @@ Handlebars.registerHelper('vegan', function(response) {
 		return m.category === 'Vegan';
 
 	});
-	render(meals, array);
+	renderMeals(meals, array);
 	return array.join("");
 });
 Handlebars.registerHelper('drink', function(response) {
@@ -41,7 +47,7 @@ Handlebars.registerHelper('drink', function(response) {
 		return m.category === 'Drink';
 
 	});
-	render(meals, array);
+	renderItems(meals, array);
 	return array.join("");
 });
 Handlebars.registerHelper('salad', function(response) {
@@ -50,6 +56,15 @@ Handlebars.registerHelper('salad', function(response) {
 		return m.category === 'Salad';
 
 	});
-	render(meals, array);
+	renderItems(meals, array);
+	return array.join("");
+});
+Handlebars.registerHelper('side', function(response) {
+	var array = [];
+	var meals = response.filter(function(m) {
+		return m.category === 'Side';
+
+	});
+	renderItems(meals, array);
 	return array.join("");
 });

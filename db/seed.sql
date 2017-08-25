@@ -35,7 +35,7 @@ VALUES
     ("Side", "Lentil Soup", "Side", 3.95, now(), now()),
     ("Side", "Hummus", "Side", 4.95, now(), now()),
     ("Side", "Hummus +Shawarma", "Side", 7.45, now(), now()),
-    ("Side", "Boba Ghanouj", "Side", 5.25, now(), now()),
+    ("Side", "Baba Ghanouj", "Side", 5.25, now(), now()),
     ("Side", "Falafel", "Side", 3.95, now(), now()),
     ("Side", "Stuffed Grape Leaves", "Side", 5.25, now(), now()),
     ("Side", "Rice", "Side", 2.95, now(), now()),

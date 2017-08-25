@@ -3,7 +3,7 @@ html, body {
 	padding: 0px;
 }
 body {
-	height: 1500px;
+	/*height: 1500px;*/
 	background: #ddd;
 }
 .section1 {
@@ -141,6 +141,11 @@ nav {
 }
 .flexContainer {
 	width: 1100px;
+	display: flex;
+	margin: 0 auto;
+}
+.flexContainer2 {
+	width: 1200px;
 	display: flex;
 	margin: 0 auto;
 }
@@ -319,4 +324,46 @@ nav {
 	width: 100%;
 	font-family: 'Slabo', sans-serif;
 	font-size: 18px;
+}
+#signIn {
+	border-radius: 10px;
+	margin-top: 33px;
+	margin-left: 15px;
+	background: #d43c49;
+	color: #fff;
+	font-size: 18px;
+}
+#signIn li {
+
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+.meals {
+	padding-right: 30px;
+}
+.mealItem {
+	position: relative;
+	padding: 8px 0px 6px 0px;
+	border-bottom: solid 1px #CCC;
+}
+.style {
+	position: absolute;
+	right: 90px;
+}
+.meals button {
+	position: absolute;
+	right: 0px;
+}
+.meals button:hover {
+	cursor: pointer;
+}
+.menuPage h1 {
+	font-family: 'Slabo', sans-serif;
+	font-size: 32px;
+}
+.menuPage h2 {
+	font-family: 'Encode Sans', sans-serif;
+	font-size: 24px;
 }

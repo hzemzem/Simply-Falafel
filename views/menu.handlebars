@@ -1,31 +1,51 @@
-<div class="container">
-	<div class="flexContainer">
+<nav class="nav">
+	<div class="container">
+		<div class="logo"></div>
+		<ul class="menu" style="float:right; width: 280px;">
+			<a href="/"><li>Main</li></a>
+			<div class="border"></div>
+			<a href="#sign" id="signIn"><li>Sign In</li></a>
+			<div class="clear"></div>
+		</ul>
+		<div class="clear"></div>
+	</div>
+</nav>
+<div class="container menuPage" style="margin-top: 170px; margin-bottom: 15px;">
+	<h1>Online Order Menu</h1>
+	<div class="platter">**Plater comes with rice, salad, and drink</div>
+	<div class="flexContainer2">
 		<div class="flexFood">
-			<h1>Meal</h1>
+			<h2>Meal</h2>
 			<div class="meals">
 				{{#meal response}}
 				{{/meal}}
 			</div>
 		</div>
 		<div class="flexFood">
-			<h1>Vegan</h1>
+			<h2>Vegan</h2>
 			<div class="meals">
 				{{#vegan response}}
 				{{/vegan}}
 			</div>
-			<h1>Kids</h1>
+			<h2>Kids</h2>
+			<div class="platter">**comes with fries and drink</div>
 			<div class="meals">
 				{{#kids response}}
 				{{/kids}}
 			</div>
-			<h1>Salad</h1>
+			<h2>Salad</h2>
 			<div class="meals">
 				{{#salad response}}
 				{{/salad}}
 			</div>
 		</div>
 		<div class="flexFood">
-			<h1>Drinks</h1>
+			<h2>Sides</h2>
+			<div class="meals">
+				{{#side response}}
+				{{/side}}
+			</div>
+			<h2>Drinks</h2>
 			<div class="meals">
 				{{#drink response}}
 				{{/drink}}
@@ -33,3 +53,8 @@
 		</div>
 	</div>
 </div>
+<footer class="footer">
+	<div class="container">
+		&copy;2017 | Simply Falafel | 6627 Roswell Rd Suite A, Sandy Springs, GA
+	</div>
+</footer>
