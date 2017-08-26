@@ -367,3 +367,12 @@ nav {
 	font-family: 'Encode Sans', sans-serif;
 	font-size: 24px;
 }
+.platter {
+	font-family: 'Encode Sans', sans-serif;
+	font-size: 16px;
+	font-style: italic;	
+}
+.section2 .platter {
+	
+	margin-left: 80px;
+}
