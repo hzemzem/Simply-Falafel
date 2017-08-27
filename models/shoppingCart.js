@@ -9,6 +9,10 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
             defaultValue: 1
         },
+        SpecialRequest: {
+            type: DataTypes.TEXT,
+            allowNull: false
+        },
         Price: {
             type: DataTypes.DECIMAL(10, 2),
             allowNull: false

@@ -31,11 +31,8 @@ $(document).ready(function() {
 				imgSRC = "assets/images/gallery/"+count+".jpg";
 			}
 			slideShow.attr("src", imgSRC);
-			// slideShow.attr("data-fancybox", "gallery");
-			// slideShow.attr("data-thumb", "assets/images/gallery/thumbs/0"+count+".jpg");
 			$(".slideshow").append(slideShow);
 		}
-		console.log($(".slideshow").children($("img")).attr("src"));
 
 		changeSlide(1, $(".slideshow img"));
 		function changeSlide(i, items) {

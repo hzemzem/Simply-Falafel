@@ -1,10 +1,17 @@
 <nav class="nav">
 	<div class="container">
 		<a href="/"><div class="logo"></div></a>
-		<ul class="menu" style="float:right; width: 280px;">
+		<ul class="menu" style="float:right; width: 430px;">
 			<a href="/"><li>Main</li></a>
 			<div class="border"></div>
-			<a href="#sign" id="signIn"><li>Sign In</li></a>
+			<a href="#sign" id="signInBTN"><li>Sign In</li></a>
+			<div class="border"></div>
+			<!-- <a href="" id="cart" style="margin-left: 0px;"><li><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 30px;"></i></li></a> -->
+
+			<div id="itemCount"></div>
+
+			<div id="cart" style="margin-right: 60px; margin-top: 40px; cursor: pointer;"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 30px;"></i></div>
+
 			<div class="clear"></div>
 		</ul>
 		<div class="clear"></div>
@@ -58,3 +65,47 @@
 		&copy;2017 | Simply Falafel | 6627 Roswell Rd Suite A, Sandy Springs, GA
 	</div>
 </footer>
+
+<div class="modal" id="shoppingCart">
+	<div class="window">
+		<div class="close"><i class="fa fa-times-circle" aria-hidden="true" style="font-size: 30px;"></i></div>
+		<h2>Items array</h2>
+	</div>
+</div>
+
+<div class="modal quantity">
+	<div class="window">
+		<div class="close"><i class="fa fa-times-circle" aria-hidden="true" style="font-size: 30px;"></i></div>
+	</div>
+</div>
+
+<div class = "modal signIn">
+	<div id="signIn">
+		<div class="close"><i class="fa fa-times-circle" aria-hidden="true" style="font-size: 30px; color: #fff;"></i></div>
+	    <form>
+	    <h2 id="signInHeader">Sign In Form</h2>
+	      <!-- <div class="imgcontainer">
+	        <img class="signInLogo" src="assets/images/logo2.png">
+	      </div> -->
+
+	      <div class="container">
+	        <p><b>Email</b></p>
+	        <input id="emailAddress" type="email" placeholder="Enter Email" required>
+
+	        <p><b>Password</b></p>
+	        <input id="password" type="password" placeholder="Enter Password" required><br>
+	            
+	        <button type="submit">Sign In</button><br>
+	        <input type="checkbox" checked="checked"> Remember me
+	        <span class="psw"><a href="#">Forgot My Password?</a></span>
+
+	      </div>
+	    </form>
+	</div>
+</div>
+
+<script>
+	$(".quantity").hide();
+	$(".signIn").hide();
+	$("#shoppingCart").hide();
+</script>
