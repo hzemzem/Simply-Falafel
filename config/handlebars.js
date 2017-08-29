@@ -2,7 +2,7 @@ Handlebars = require('handlebars');
 
 function renderMeals(meals, array) {
 	for (var i =0; i < meals.length; i++) {
-		var line = "\t\t\t\t<div class='mealItem'>"+meals[i].menuItem+"<span class='style'>"+meals[i].style+"</span><button class='menuPrice' data-ID='"+meals[i].id+"'>"+meals[i].price+"</button></div>\n";
+		var line = "\t\t\t\t<div class='mealItem'><span class='item_name'>"+meals[i].menuItem+"</span><span class='style'>"+meals[i].style+"</span><button class='menuPrice' data-ID='"+meals[i].id+"'>"+meals[i].price+"</button></div>\n";
 		array.push(line)
 	}	
 }

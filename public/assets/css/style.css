@@ -367,6 +367,10 @@ nav {
 	font-family: 'Encode Sans', sans-serif;
 	font-size: 24px;
 }
+.description h2 {
+	font-family: 'Encode Sans', sans-serif;
+	font-size: 24px;	
+}
 .platter {
 	font-family: 'Encode Sans', sans-serif;
 	font-size: 16px;
