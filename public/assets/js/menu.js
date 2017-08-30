@@ -44,7 +44,18 @@ $(document).ready(function() {
 			}
 			console.log(item.menuItem);
 			//create a div with menu item and quantity option
-			var select = '<select name="quantity" id="quantity"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select>'
+			var select = '<select name="quantity" id="quantity">'+
+				'<option value=""></option>'+
+				'<option value="1">1</option>'+
+				'<option value="2">2</option>'+
+				'<option value="3">3</option>'+
+				'<option value="4">4</option>'+
+				'<option value="5">5</option>'+
+				'<option value="6">6</option>'+
+				'<option value="7">7</option>'+
+				'<option value="8">8</option>'+
+				'</select>';
+
 			var line = "<div id='menuItem'>"+item.menuItem+"..........."+select+"</div>";
 			$(".quantity .window").append(line);
 			//display the menu item modal
@@ -89,7 +100,15 @@ $(document).ready(function() {
 			} else {
 				$("#shoppingCart .window .form").attr("action", "/ShoppingCart")
 				for (var i=0; i < bin.length; i++) {
-					var item = "<div class='lineItem' data='"+i+"'><input type='hidden' type='text' name='menuItem' value='"+bin[i].menuItem+"'><input type='hidden' type='text' name='price' value='"+bin[i].price+"'><span class='menuItem'>Item: "+bin[i].menuItem+"</span><span class='specialRequest'>Special Request: <input type='text' name='specialRequest'></span><span class='price'> price: "+bin[i].price+"</span><span class='remove'><i class='fa fa-trash' aria-hidden='true' style='font-size: 20px;'></i></span></div>";
+					var item = "<div class='lineItem' data='"+i+"'>"+
+						"<input type='hidden' type='text' name='menuItem' value='"+bin[i].menuItem+"'>"+
+						"<input type='hidden' type='text' name='price' value='"+bin[i].price+"'>"+
+						"<span class='menuItem'>Item: "+bin[i].menuItem+"</span>"+
+						"<span class='specialRequest'>Special Request: <input type='text' name='specialRequest'></span>"+
+						"<span class='price'> price: "+bin[i].price+"</span>"+
+						"<span class='remove'><i class='fa fa-trash' aria-hidden='true' style='font-size: 20px;'></i></span>"+
+						"</div>";
+						
 					$("#shoppingCart .window .form").prepend(item);
 				}
 			}
