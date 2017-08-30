@@ -15,12 +15,16 @@ module.exports = function(app) {
   // POST route for populating the shopping cart
   app.post("/ShoppingCart", function(req, res) {
     console.log(req.body);
-    db.ShoppingCart.create({
-      Items: req.body.menuItem,
-      Price: req.body.price
-    })
-    .then(function(dbMenuItem) {
-      res.json(dbMenuItem);
-    });
+    for (var i=0; i < req.body.menuItem.length; i++) {
+      console.log(req.body.specialRequest[i]);
+      db.ShoppingCart.bulkCreate([{
+        Items: req.body.menuItem[i],
+        specialRequest: req.body.specialRequest[i],
+        Price: req.body.price[i]
+      }])
+      .then(function(dbMenuItem) {
+        res.json(dbMenuItem);
+      });
+    }
   });
 };

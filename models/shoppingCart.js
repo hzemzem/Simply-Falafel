@@ -4,14 +4,8 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.TEXT,
             allowNull: false
         }, 
-        Quantity: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            defaultValue: 1
-        },
-        SpecialRequest: {
+        specialRequest: {
             type: DataTypes.TEXT,
-            allowNull: false
         },
         Price: {
             type: DataTypes.DECIMAL(10, 2),
