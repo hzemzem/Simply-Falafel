@@ -22,20 +22,20 @@ module.exports = function(app) {
         Price: req.body.price[i]
       }])
       .then(function(dbMenuItem) {
-        // res.json(dbMenuItem);
+        res.json(dbMenuItem);
       });
     }
   });
   // POST route for populating the shopping cart
   app.post("/SingleItem", function(req, res) {
     console.log(req.body);
-      db.ShoppingCart.bulkCreate([{
+      db.ShoppingCart.create({
         Items: req.body.menuItem,
         specialRequest: req.body.specialRequest,
         Price: req.body.price
-      }])
+      })
       .then(function(dbMenuItem) {
-        // res.json(dbMenuItem);
+        res.json(dbMenuItem);
       });
   });
 };
