@@ -22,7 +22,7 @@ module.exports = function(app) {
         Price: req.body.price[i]
       }])
       .then(function(dbMenuItem) {
-        res.json(dbMenuItem);
+        // res.json(dbMenuItem);
       });
     }
   });
@@ -35,7 +35,7 @@ module.exports = function(app) {
         Price: req.body.price
       })
       .then(function(dbMenuItem) {
-        res.json(dbMenuItem);
+        // res.json(dbMenuItem);
       });
   });
 };
