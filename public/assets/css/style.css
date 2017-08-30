@@ -396,6 +396,7 @@ nav {
 	top: 0;
 	left: 0;
 }
+
 .quantity .window {
 	background: #DDD;
 	margin: 190px auto;
@@ -451,7 +452,12 @@ nav {
 
 #signIn .close i {
 	margin-top: 20px;
-	margin-right: 15px;
+	margin-right: 15px; 
+}
+
+#register .close i {
+	margin-top: 20px;
+	margin-right: 15px; 
 }
 
 #signIn button:hover {
@@ -486,6 +492,10 @@ span.psw {
 #signIn .container {
     padding: 16px;
 }
+
+#register .container {
+    padding: 16px;
+}
 #shoppingCart .window {
 	background: #ddd;
 	width: 760px;
@@ -508,4 +518,59 @@ span.psw {
 }
 .close {
 	cursor: pointer;
+}
+
+#register {
+    width: 600px;
+    margin: 120px auto;
+    background: #d43c49;
+    color: #fff;
+    border: 3px solid #f1f1f1;
+    border-radius: 10px;
+}
+
+#register #registerHeader {
+	text-align: center;
+}
+
+#register .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    background-size: cover;
+    margin-top: 5px;
+}
+
+#register button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 560px;
+}
+#register button:hover {
+    opacity: 0.8;
+}
+
+#register h2 {
+	font-family: 'Encode Sans', sans-serif;
+	font-size: 24px;	
+}
+
+#register input[type=text], input[type=email], input[type=password] {
+    width: 560px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#register .container p {
+	width: 560px;
+	font-family: 'Slabo', sans-serif;
+	font-size: 18px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
 }
