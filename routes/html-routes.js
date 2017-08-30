@@ -16,6 +16,7 @@ module.exports = function(app) {
 		})
 	});
 
+
 	app.get('/menu', isAuthenticated, function(req, res) {
 		db.MenuItem.findAll({}).then(function(response){
 			return res.render('menu', {response});

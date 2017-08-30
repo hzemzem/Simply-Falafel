@@ -599,3 +599,22 @@ span.psw {
 	right: 0px;
 
 }
+.checkout .window {
+	background: #DDD;
+	margin: 190px auto;
+	width: 600px;
+	padding: 20px;
+	border-radius: 10px;
+}
+.checkout .window .items {
+	margin-left: 30px;
+	width: 520px;
+	position: relative;
+}
+.checkout .items .price {
+	float: none;
+	text-align: right;
+}
+.checkout .items .request {
+	text-align: center;
+}

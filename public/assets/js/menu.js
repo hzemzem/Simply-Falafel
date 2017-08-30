@@ -13,6 +13,10 @@ $(document).ready(function() {
 			$("#shoppingCart").hide();
 		})
 	});
+	$("#shoppingCart button").on("click", function() {
+		$(".checkout").show();
+		$("#shoppingCart").hide();
+	});
 // var cart = localStorage.getItem("cart");
 // cart = JSON.parse(cart);
 // console.log("cart: "+cart);
@@ -93,7 +97,11 @@ $(document).ready(function() {
 					$("#shoppingCart .window .form").prepend(item);
 				}
 			}
-
+			for (var z=0; z < bin.length; z++) {
+				if (bin[z].specialRequest === undefined) bin[z].specialRequest = "No special request";
+				var checkoutLine = "<div class='checkoutItem'>"+bin[z].menuItem+"<span class='request'>"+bin[z].specialRequest+"</span><span class='price'>"+bin[z].price+"</span>"
+				$(".checkout .items").append(checkoutLine);
+			}
 			$(".remove").on("click", function() {
 				var removeItem = $(this).parent($(".lineItem"));
 				var binItem = removeItem.attr("data");
