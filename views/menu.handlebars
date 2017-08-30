@@ -70,7 +70,11 @@
 	<div class="window">
 		<div class="close"><i class="fa fa-times-circle" aria-hidden="true" style="font-size: 30px;"></i></div>
 		<h2>Items</h2>
+
 		<form action="/ShoppingCart" method="POST" class="form">
+		<div class="subTotal">Sub Total: <span></span></div>
+		<div class="tax">Tax: 8%</div>
+		<div class="total">Total: <span></span></div>
 		<button type="submit">Submit</button>
 		</form>
 	</div>
@@ -82,8 +86,17 @@
 	</div>
 </div>
 
+<div class="modal checkout">
+	<div class="window">
+		<div class="close"><i class="fa fa-times-circle" aria-hidden="true" style="font-size: 30px;"></i></div>
+		<h1>Order confirmed</h1>
+		<h2>Your order will be ready for pickup within 10 minutes.  Payment is expected then</h2>
+	</div>
+</div>
+
 <script>
 	$(".quantity").hide();
 	$(".signIn").hide();
 	$("#shoppingCart").hide();
+	$(".checkout").hide();
 </script>

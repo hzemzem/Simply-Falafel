@@ -14,7 +14,6 @@ module.exports = function(app) {
   });
   // POST route for populating the shopping cart
   app.post("/ShoppingCart", function(req, res) {
-    console.log(req.body);
     for (var i=0; i < req.body.menuItem.length; i++) {
       console.log(req.body.specialRequest[i]);
       db.ShoppingCart.bulkCreate([{
@@ -23,8 +22,20 @@ module.exports = function(app) {
         Price: req.body.price[i]
       }])
       .then(function(dbMenuItem) {
-        res.json(dbMenuItem);
+        // res.json(dbMenuItem);
       });
     }
+  });
+  // POST route for populating the shopping cart
+  app.post("/SingleItem", function(req, res) {
+    console.log(req.body);
+      db.ShoppingCart.bulkCreate([{
+        Items: req.body.menuItem,
+        specialRequest: req.body.specialRequest,
+        Price: req.body.price
+      }])
+      .then(function(dbMenuItem) {
+        // res.json(dbMenuItem);
+      });
   });
 };

@@ -401,7 +401,7 @@ nav {
 	margin: 190px auto;
 	width: 300px;
 	padding: 20px;
-	height: 400px;
+	height: 150px;
 	border-radius: 10px;
 }
 .quantity .close {
@@ -508,4 +508,29 @@ span.psw {
 }
 .close {
 	cursor: pointer;
+}
+
+#shoppingCart .lineItem {
+	font-family: 'Slabo', sans-serif;
+	font-size: 14px;
+	position: relative;
+	width: 690px;
+}
+.lineItem .menuItem {
+
+}
+.lineItem .specialRequest {
+	position: absolute;
+	right: 150px;
+}
+.lineItem .price {
+	clear: both;
+	position: absolute;
+	right: 40px;
+	top: 20px;
+}
+.lineItem .remove {
+	clear: both;
+	position: absolute;
+	right: 0px;
 }

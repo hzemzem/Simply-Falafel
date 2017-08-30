@@ -13,10 +13,21 @@ $(document).ready(function() {
 			$("#shoppingCart").hide();
 		})
 	});
-
+// var cart = localStorage.getItem("cart");
+// cart = JSON.parse(cart);
+// console.log("cart: "+cart);
 	//function for getting json array of menu items
 	$.getJSON("/menuItem", function(results) {
-		var bin = []; //create global bin array variable
+		var bin = [];
+		// if (!bin) {
+		// 	if (cart === null) {
+		// 		var bin = []; //create global bin array variable
+		// 	} else {
+		// 		var bin = [];
+		// 		Array.prototype.push.apply(bin, cart);
+		// 		console.log("bin: "+bin);
+		// 	}
+		// }
 		var item; //set global item variable
 		//set click function for menu price and quantity confirmation
 		$(".menuPrice").click(function(e) {
@@ -56,9 +67,11 @@ $(document).ready(function() {
 					for (var i=0; i < num; i++) {
 						bin.push(item); //push item to bin array
 					}
+					// localStorage.setItem("cart", JSON.stringify(bin));
 					cart(bin); //run cart display function with bin array
 				} else { //else if num is empty, return
 					return;
+					cart(bin);
 				}
 				delete item;
 				delete num;
@@ -69,10 +82,42 @@ $(document).ready(function() {
 			$("#itemCount").html(bin.length);
 			$(".lineItem").remove();
 			console.log(bin);
-			for (var i=0; i < bin.length; i++) {
-				var item = "<input type='hidden' type='text' name='menuItem' value='"+bin[i].menuItem+"'><input type='hidden' type='text' name='price' value='"+bin[i].price+"'><div class='lineItem' data='"+i+"'><span class='menuItem'>Item: "+bin[i].menuItem+"</span><span class='specialRequest'>Special Request: <input type='text' name='specialRequest' value='default'></span><span class='price'> price: "+bin[i].price+"</span><button class='remove'><i class='fa fa-trash' aria-hidden='true'></i></button></div>";
-				$("#shoppingCart .window .form").append(item);
+			if (bin.length === 1) {
+				$("#shoppingCart .window .form").attr("action", "/SingleItem")
+				var item = "<div class='lineItem' data='"+i+"'><input type='hidden' type='text' name='menuItem' value='"+bin[0].menuItem+"'><input type='hidden' type='text' name='price' value='"+bin[0].price+"'><span class='menuItem'>Item: "+bin[0].menuItem+"</span><span class='specialRequest'>Special Request: <input type='text' name='specialRequest'></span><span class='price'> price: "+bin[0].price+"</span><span class='remove'><i class='fa fa-trash' aria-hidden='true' style='font-size: 20px;'></i></span></div>";
+				$("#shoppingCart .window .form").prepend(item);
+			} else {
+				$("#shoppingCart .window .form").attr("action", "/ShoppingCart")
+				for (var i=0; i < bin.length; i++) {
+					var item = "<div class='lineItem' data='"+i+"'><input type='hidden' type='text' name='menuItem' value='"+bin[i].menuItem+"'><input type='hidden' type='text' name='price' value='"+bin[i].price+"'><span class='menuItem'>Item: "+bin[i].menuItem+"</span><span class='specialRequest'>Special Request: <input type='text' name='specialRequest'></span><span class='price'> price: "+bin[i].price+"</span><span class='remove'><i class='fa fa-trash' aria-hidden='true' style='font-size: 20px;'></i></span></div>";
+					$("#shoppingCart .window .form").prepend(item);
+				}
 			}
+
+			$(".remove").on("click", function() {
+				var removeItem = $(this).parent($(".lineItem"));
+				var binItem = removeItem.attr("data");
+				bin.splice(binItem,1);
+				$("#itemCount").html(bin.length);
+				calc(bin);
+				console.log(bin);
+				removeItem.remove();
+			});
+			function calc(bin) {
+				var subTotal = parseFloat(0);
+				for (var z=0; z < bin.length; z++) {
+					subTotal += parseFloat(bin[z].price);
+				}
+				subTotal = Math.round(subTotal * 100) / 100;
+				Total = (subTotal * .08) + subTotal;
+				// Total.toFixed(2);
+				Total = Math.round(Total * 100) / 100;
+				$(".subTotal span").html(subTotal);
+				$(".total span").html(Total);
+				console.log("subTotal: "+subTotal+" Total: "+Total);
+
+			}
+			calc(bin);
 		}
 	});
 });
