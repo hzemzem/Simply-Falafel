@@ -99,7 +99,7 @@ $(document).ready(function() {
 			console.log(bin);
 			if (bin.length === 1) {
 				$("#shoppingCart .window .form").attr("action", "/SingleItem")
-				var item = "<div class='lineItem' data='"+i+"'><input type='hidden' type='text' name='menuItem' value='"+bin[0].menuItem+"'><input type='hidden' type='text' name='price' value='"+bin[0].price+"'><span class='menuItem'>Item: "+bin[0].menuItem+"</span><span class='specialRequest'>Special Request: <input type='text' name='specialRequest'></span><span class='price'> price: "+bin[0].price+"</span><span class='remove'><i class='fa fa-trash' aria-hidden='true' style='font-size: 20px;'></i></span></div>";
+				var item = "<div class='lineItem' data='"+i+"'><input type='hidden' type='text' name='menuItem' value='"+bin[0].menuItem+"'><input type='hidden' type='text' name='price' value='"+bin[0].price+"'><span class='menuItem'>"+bin[0].menuItem+"</span><span class='specialRequest'>Special Request: <input type='text' name='specialRequest'></span><span class='price'> price: "+bin[0].price+"</span><span class='remove'><i class='fa fa-trash' aria-hidden='true' style='font-size: 20px;'></i></span></div>";
 				$("#shoppingCart .window .form").prepend(item);
 			} else {
 				$("#shoppingCart .window .form").attr("action", "/ShoppingCart")
@@ -107,7 +107,7 @@ $(document).ready(function() {
 					var item = "<div class='lineItem' data='"+i+"'>"+
 						"<input type='hidden' type='text' name='menuItem' value='"+bin[i].menuItem+"'>"+
 						"<input type='hidden' type='text' name='price' value='"+bin[i].price+"'>"+
-						"<span class='menuItem'>Item: "+bin[i].menuItem+"</span>"+
+						"<span class='menuItem'>"+bin[i].menuItem+"</span>"+
 						"<span class='specialRequest'>Special Request: <input type='text' name='specialRequest'></span>"+
 						"<span class='price'> price: "+bin[i].price+"</span>"+
 						"<span class='remove'><i class='fa fa-trash' aria-hidden='true' style='font-size: 20px;'></i></span>"+
@@ -118,7 +118,7 @@ $(document).ready(function() {
 			}
 			for (var z=0; z < bin.length; z++) {
 				if (bin[z].specialRequest === undefined) bin[z].specialRequest = "No special request";
-				var checkoutLine = "<div class='checkoutItem'>"+bin[z].menuItem+"<span class='request'>"+bin[z].specialRequest+"</span><span class='price'>"+bin[z].price+"</span>"
+				var checkoutLine = "<div class='checkoutItem'>"+bin[z].menuItem+"<span class='request'>"+bin[z].specialRequest+"</span><span class='price'>"+bin[z].price+"</span></div><div class='clear'></div>"
 				$(".checkout .items").append(checkoutLine);
 			}
 			$(".remove").on("click", function() {

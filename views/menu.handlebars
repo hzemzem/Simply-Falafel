@@ -72,10 +72,13 @@
 		<h2>Items</h2>
 
 		<form action="/ShoppingCart" method="POST" class="form">
-		<div class="subTotal">Sub Total: <span></span></div>
-		<div class="tax">Tax: 8%</div>
-		<div class="total">Total: <span></span></div>
-		<button type="submit">Submit</button>
+		<div class="shoppingCol">
+			<div class="subTotal">Sub Total: <span></span></div>
+			<div class="tax">Tax: 8%</div>
+			<div class="total">Total: <span></span></div>
+			<button type="submit" style="float: right; margin-left: 80px;">Submit</button>
+		</div>
+		<div class="clear"></div>
 		</form>
 	</div>
 </div>
@@ -89,12 +92,15 @@
 
 <div class="modal checkout">
 	<div class="window">
-		<a href="JavaScript:window.close()"><div class="close"><i class="fa fa-times-circle" aria-hidden="true" style="font-size: 30px;"></i></div></a>
+		<a href="JavaScript:window.close()" style="color: #000;"><div class="close"><i class="fa fa-times-circle" aria-hidden="true" style="font-size: 30px;"></i></div></a>
 		<h1>Order confirmed</h1>
 		<div class="items"></div>
-		<div class="subTotal">Sub Total: <span></span></div>
-		<div class="tax">Tax: 8%</div>
-		<div class="total">Total: <span></span></div>
+		<div class="shoppingCol">
+			<div class="subTotal">Sub Total: <span></span></div>
+			<div class="tax">Tax: 8%</div>
+			<div class="total">Total: <span></span></div>
+		</div>
+		<div class="clear"></div>
 		<h2>Your order will be ready for pickup within 10 minutes.  Payment is expected then.  We accept cash and major credit cards.</h2>
 	</div>
 </div>
