@@ -149,7 +149,7 @@ $(document).ready(function() {
 				$(".checkout .itemCheckout .checkoutItem").remove();
 				for (var z=0; z < bin.length; z++) {
 					
-					if (specialArr[z] === undefined) specialArr[z] = "No special request";
+					if (specialArr[z] === "") specialArr[z] = "No special request";
 					var checkoutLine = "<div class='checkoutItem'>"+bin[z].menuItem+"<span class='request'>"+specialArr[z]+"</span><span class='price'>"+bin[z].price+"</span></div><div class='clear'></div>"
 					$(".checkout .itemCheckout").append(checkoutLine);
 				}
