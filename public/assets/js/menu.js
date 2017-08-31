@@ -13,10 +13,7 @@ $(document).ready(function() {
 			$("#shoppingCart").hide();
 		})
 	});
-	$("#shoppingCart button").on("click", function() {
-		$(".checkout").show();
-		$("#shoppingCart").hide();
-	});
+
 // var cart = localStorage.getItem("cart");
 // cart = JSON.parse(cart);
 // console.log("cart: "+cart);
@@ -108,18 +105,13 @@ $(document).ready(function() {
 						"<input type='hidden' type='text' name='menuItem' value='"+bin[i].menuItem+"'>"+
 						"<input type='hidden' type='text' name='price' value='"+bin[i].price+"'>"+
 						"<span class='menuItem'>"+bin[i].menuItem+"</span>"+
-						"<span class='specialRequest'>Special Request: <input type='text' name='specialRequest'></span>"+
+						"<span class='specialRequest'>Special Request: <input type='text' name='specialRequest' id ='special"+i+"'></span>"+
 						"<span class='price'> price: "+bin[i].price+"</span>"+
 						"<span class='remove'><i class='fa fa-trash' aria-hidden='true' style='font-size: 20px;'></i></span>"+
 						"</div>";
 						
 					$("#shoppingCart .window .form").prepend(item);
 				}
-			}
-			for (var z=0; z < bin.length; z++) {
-				if (bin[z].specialRequest === undefined) bin[z].specialRequest = "No special request";
-				var checkoutLine = "<div class='checkoutItem'>"+bin[z].menuItem+"<span class='request'>"+bin[z].specialRequest+"</span><span class='price'>"+bin[z].price+"</span></div><div class='clear'></div>"
-				$(".checkout .items").append(checkoutLine);
 			}
 			$(".remove").on("click", function() {
 				var removeItem = $(this).parent($(".lineItem"));
@@ -146,6 +138,28 @@ $(document).ready(function() {
 
 			}
 			calc(bin);
+			function checkout(bin) {
+				var specialArr = [];
+				var specialItems = $(".specialRequest");
+				for (var w = 0; w < specialItems.length; w++) {
+					var specialItem = $(".specialRequest #special"+w).val();
+					specialArr.push(specialItem);
+				}
+				console.log(specialArr);				
+				$(".checkout .itemCheckout .checkoutItem").remove();
+				for (var z=0; z < bin.length; z++) {
+					
+					if (specialArr[z] === undefined) specialArr[z] = "No special request";
+					var checkoutLine = "<div class='checkoutItem'>"+bin[z].menuItem+"<span class='request'>"+specialArr[z]+"</span><span class='price'>"+bin[z].price+"</span></div><div class='clear'></div>"
+					$(".checkout .itemCheckout").append(checkoutLine);
+				}
+			}
+			$("#shoppingCart button").on("click", function() {
+				checkout(bin);
+				$(".checkout").show();
+				$("#shoppingCart").hide();
+			});
+
 		}
 	});
 
