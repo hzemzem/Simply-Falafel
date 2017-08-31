@@ -130,6 +130,7 @@ $(document).ready(function() {
 				console.log(bin);
 				removeItem.remove();
 			});
+			// calculates order price
 			function calc(bin) {
 				var subTotal = parseFloat(0);
 				for (var z=0; z < bin.length; z++) {
@@ -146,5 +147,17 @@ $(document).ready(function() {
 			}
 			calc(bin);
 		}
+	});
+
+	//click function to close out the order confirmation
+	$("#orderCnfBTN").on("click", function(){
+		//ajax calls to transfer data from shopping cart to order history
+		$.ajax({
+			url: "/menu",
+			method: "DELETE",
+		}).done(function() {
+			console.log("Order Complete");
+			window.close();
+		});
 	});
 });

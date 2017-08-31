@@ -38,4 +38,15 @@ module.exports = function(app) {
         // res.json(dbMenuItem);
       });
   });
+  // Delete route for clearing shopping cart once order is complete
+  app.delete("/menu", function(req, res) {
+    db.ShoppingCart.findAll({}).then(function(){
+      return db.ShoppingCart.destroy({
+        where: {},
+        truncate: true
+      }).then(function() {
+        res.end();
+      });
+    });
+  });
 };
