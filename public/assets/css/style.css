@@ -325,6 +325,11 @@ nav {
 	font-family: 'Slabo', sans-serif;
 	font-size: 18px;
 }
+#orderCnfBTN {
+	border: none;
+	height: 35px;
+}
+
 #signInBTN {
 	border-radius: 10px;
 	margin-top: 33px;
