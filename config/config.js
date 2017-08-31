@@ -1,13 +1,13 @@
-// var password = require("./../password.js");
+var password = require("./../password.js");
 
 module.exports = {
-  // "development": {
-  //   "username": "root",
-  //   "password": password,
-  //   "database": "simply_falafel_db",
-  //   "host": "127.0.0.1",
-  //   "dialect": "mysql"   
-  // },
+  "development": {
+    "username": "root",
+    "password": password,
+    "database": "simply_falafel_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"   
+  },
   "test": {
     "username": "root",
     "password": null,
